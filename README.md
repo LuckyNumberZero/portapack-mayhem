@@ -1,58 +1,90 @@
-# PortaPack Mayhem
+# portapack-havoc-modified
 
-[![Build Status](https://travis-ci.com/eried/portapack-mayhem.svg?branch=master)](https://travis-ci.com/eried/portapack-mayhem) [![Nightly Release](https://github.com/eried/portapack-mayhem/actions/workflows/create_nightly_release.yml/badge.svg?branch=next)](https://github.com/eried/portapack-mayhem/actions/workflows/create_nightly_release.yml) [![CodeScene Code Health](https://codescene.io/projects/8381/status-badges/code-health)](https://codescene.io/projects/8381) [![GitHub All Releases](https://img.shields.io/github/downloads/eried/portapack-mayhem/total)](https://github.com/eried/portapack-mayhem/releases) [![GitHub Releases](https://img.shields.io/github/downloads/eried/portapack-mayhem/latest/total)](https://github.com/eried/portapack-mayhem/releases/latest) [![Docker Hub Pulls](https://img.shields.io/docker/pulls/eried/portapack.svg)](https://hub.docker.com/r/eried/portapack) [![Discord Chat](https://img.shields.io/discord/719669764804444213.svg)](https://discord.gg/tuwVMv3)  [![Check bounties!](https://img.shields.io/bountysource/team/portapack-mayhem/activity?color=%2333ccff&label=bountysource%20%28USD%29&style=plastic)](https://www.bountysource.com/teams/portapack-mayhem/issues)
+**New H3 Mini announced. Features 3.2" screen and original thin encoder**
 
-This is a fork of the [Havoc](https://github.com/furrtek/portapack-havoc/) firmware, which itself was a fork of the [PortaPack](https://github.com/sharebrained/portapack-hackrf) firmware, an add-on for the [HackRF](http://greatscottgadgets.com/hackrf/). A fork is a derivate, in this case one that has extra features and fixes when compared to the older versions.
+<img width="500" alt="H3SE" src="https://user-images.githubusercontent.com/17997195/227824450-1465d64b-4ca7-4d9d-bf06-1714b9f1bec1.png">
 
-[<img src="https://raw.githubusercontent.com/wiki/eried/portapack-mayhem/img/hw_overview_h2_front.png" height="400">](https://github.com/eried/portapack-mayhem/wiki/Hardware-overview) [<img src="https://raw.githubusercontent.com/wiki/eried/portapack-mayhem/img/hw_overview_h2_inside.png" height="400">](https://github.com/eried/portapack-mayhem/wiki/Hardware-overview#portapack-internals)
+**Distributors:**
 
-*[PortaPack H2+HackRF+battery](https://s.click.aliexpress.com/e/_DmU7GQX) (clone) with a custom [3d printed case](https://github.com/eried/portapack-mayhem/wiki/H2-Enclosure)*
+HamRadioShop:
 
-# What is this?
+https://www.aliexpress.com/item/3256804550974838.html
 
-If you are new to *HackRF+PortaPack+Mayhem*, check this video:
 
-[![What is?](https://img.youtube.com/vi/alrFbY5vxt4/0.jpg)](https://www.youtube.com/watch?v=alrFbY5vxt4)
+https://www.ebay.com/itm/XXX/115523402262
 
-# Frequently Asked Questions
+Swiftflying:
 
-This repository expands upon the previous work by many people and aims to constantly add new features, bugfixes and generate documentation to make further development easier.  [Collaboration](https://github.com/eried/portapack-mayhem/wiki/How-to-collaborate) is always welcomed and appreciated.
+https://www.aliexpress.com/item/3256804545943517.html
 
-## What to buy?
+<img width="500" alt="Screenshot 2022-05-19 103253" src="https://user-images.githubusercontent.com/17997195/169192013-493f29fb-e11a-48dd-9c3b-5a8f83d17eff.png">
 
-:heavy_check_mark: A recommended one is this [PortaPack H2](https://s.click.aliexpress.com/e/_DmU7GQX) pack, that includes everything you need. Sadly, the people making the H2 never made the updated schematics available (against the terms of the license). 
+This repository mainly focuses on hardcore DSP stuff. UI remains original HAVOC style.
 
-:heavy_check_mark: Another popular option is the clone of the [PortaPack H1](https://s.click.aliexpress.com/e/_Dkbqs2X).
+GPS simulator / Analog TV demodulator(PAL) / Bluetooth receiver / NRF24L01 demod / improved Pocsag tx and rx (P/N phase).
 
-:warning: Be cautious , *ask* the seller about compatibility with the latest releases. Look out for the description of the item, if they provide the firmware files for an older version or they have custom setup instructions, this means it might be **NOT compatible**, for example:
+**Features above are developed and published from this repository.**
+**Later taken by Mayhem, and modified to some other UI/font.**
 
-![image](https://user-images.githubusercontent.com/1091420/214579017-9ad970b9-0917-48f6-a550-588226d3f89b.png)
 
-:warning: If it looks **too different**, this might mean that they are using their own recipe, check the [different models](https://github.com/eried/portapack-mayhem/wiki/PortaPack-Versions) in our wiki. For example all the H3 and clones of that version use their own version of the firmware. They do not contribute the changes back and eventually you will be left with a device that nobody maintains:
+# Does latest features compatible with H1 or H2?
 
-![image](https://user-images.githubusercontent.com/1091420/214581333-424900ee-26f8-4e96-be2f-69d8dc995ba9.png)
+**No** for H2 (close source, **Do not buy or support**)
 
-## Where is the latest version?
+**Plausible** for H1 with my add-on board
 
-The current **stable release** is on the [![GitHub release (latest by date)](https://img.shields.io/github/v/release/eried/portapack-mayhem?label=Releases&style=social)](https://github.com/eried/portapack-mayhem/releases/latest) page. Follow the instructions you can find in the release description. The **latest (nightly) release** can be found [here](https://github.com/eried/portapack-mayhem/releases/).
 
-## How can I collaborate
-You can write [documentation](https://github.com/eried/portapack-mayhem/wiki), fix bugs and [answer issues](https://github.com/eried/portapack-mayhem/issues) or add new functionality. Please check the following [guide](https://github.com/eried/portapack-mayhem/wiki/How-to-collaborate) with details.
 
-Consider that the hardware and firmware has been created and maintain by a [lot](https://github.com/mossmann/hackrf/graphs/contributors) of [people](https://github.com/eried/portapack-mayhem/graphs/contributors), so always try collaborating your time and effort first. For coding related questions, if something does not fit as an issue, please join our Discord by clicking the chat badge on [top](#portapack-mayhem).
+# Latest/Best firmware for H3/H3 SE/H3 Mini?
 
-[![Contributors](https://contrib.rocks/image?repo=eried/portapack-mayhem)](https://github.com/eried/portapack-mayhem/graphs/contributors)
+**Most useful features of portapack are chosen and included in my version of firmware.** 
 
-To support the people behind the hardware, please buy a genuine [HackRF](https://greatscottgadgets.com/hackrf/) and [PortaPack](https://store.sharebrained.com/products/portapack-for-hackrf-one-kit).
+**However, features below are only available in my firmware on H3/H3 SE.**
 
-## What if I really want something specific?
-If what you need can be relevant in general, you can [request a feature](https://github.com/eried/portapack-mayhem/issues/new?labels=enhancement&template=feature_request.md).
 
-You can create a bounty and invite people to your own bounty. This will incentivize coders to work on a new feature, solving a bug or even writting documentation. Start a bounty by [creating](https://github.com/eried/portapack-mayhem/issues/new/choose) or [choosing](https://github.com/eried/portapack-mayhem/issues/) an existing issue. Then, go to [Bountysource](https://www.bountysource.com/) and post a bounty using the link to that specific [issue](https://www.bountysource.com/teams/portapack-mayhem/issues).
 
-Promote your bounty over our Discord by clicking the chat badge on [top](#portapack-mayhem).
+* Train Detector (NEW)
+* SSTV(robot8, martin m1&m2, scottie s1&s2, pd-120) receiving
+* NOAA receiving 
+* Morse receiver
+* Improved Analog TV receiver
+* Improved Signal Generator and Soundboard (added AM support)
+* Built in microphone
+* Built in GPS receiver for location and time sync
+* Built in battery and level indicator
+* Built in barometer
+* Built in compass
 
-## What if I need help?
-First, check the [documentation](https://github.com/eried/portapack-mayhem/wiki). If you find a bug or you think the problem is related to the current repository, please open an [issue](https://github.com/eried/portapack-mayhem/issues/new/choose).
+* 
+![image](https://user-images.githubusercontent.com/17997195/165471964-f718298b-6c43-4e9f-9c1b-8aed3bd489e5.PNG)
+![image](https://user-images.githubusercontent.com/17997195/163305857-1dcc1f41-17e2-4243-978b-0eece7e4295a.PNG)
+![image](https://user-images.githubusercontent.com/17997195/163305865-d89d2a28-f1ce-4a96-b9f9-e79d228027ef.PNG)
+![image](https://user-images.githubusercontent.com/17997195/167530145-e39a9bff-d586-4b85-8f72-e17fb8fab285.PNG)
+![image](https://user-images.githubusercontent.com/17997195/163305881-9e3298d3-0408-45fc-9793-5a285ac2276f.PNG)
+![image](https://user-images.githubusercontent.com/17997195/167978159-77b60f81-dd0a-4f12-9623-d687d8b48c24.PNG)
 
-You can reach the [official community](https://www.facebook.com/groups/177623356165819) in Facebook, and our Discord by clicking the chat badge on [top](#portapack-mayhem).
+
+# Train Detector (with multi-language support):
+![image](https://user-images.githubusercontent.com/17997195/232236907-0c22d5fb-5f53-4e22-87b8-b61be7243df1.PNG)
+![image](https://user-images.githubusercontent.com/17997195/232236922-e4226acf-266a-45a7-a2aa-736e89424b52.PNG)
+
+# Drone FPV camera demod:
+![image](https://user-images.githubusercontent.com/17997195/229970665-6354057d-4c62-4d64-bff8-f586be1e24a7.PNG)
+![image](https://user-images.githubusercontent.com/17997195/229970683-c478a067-52ca-4f2d-91f6-64b44f68ce90.PNG)
+
+
+# Analog TV Testing Method:
+
+Signal source can be commercial TV broadcasting signal 
+
+or **HackTV** with commands as below:
+
+ffmpeg -i input.mp4 -vf scale=832:576 output.mp4
+
+hacktv -f 434000000 -m i -g 47 output.mp4
+
+![image](https://user-images.githubusercontent.com/17997195/229970771-e1455f05-da34-4434-93dc-fa5ddc78f3fe.png)
+![image](https://user-images.githubusercontent.com/17997195/229970789-78b44001-698d-452d-91e5-999efc583417.png)
+
+
+
