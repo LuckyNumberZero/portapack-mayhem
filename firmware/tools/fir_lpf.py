@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 import math
 
 m = 64 - 1
@@ -8,7 +6,7 @@ ft = 300.0 / 24000.0
 taps = []
 window = []
 
-print(("Normalized ft = " + str(ft)))
+print("Normalized ft = " + str(ft))
 
 for n in range(0, 64):
 	taps.append(math.sin(2 * math.pi * ft * (n - (m / 2.0))) / (math.pi * (n - (m / 2.0))))
